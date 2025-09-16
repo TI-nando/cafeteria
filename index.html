@@ -18,7 +18,8 @@
         <li><a href="#customers">Clientes</a></li>
       </ul>
       <div class="header-icon">
-        <i class="bx bx-cart-alt"></i>
+        <i class="bx bx-cart-alt" id="cart-icon"></i>
+        <span class="cart-count" id="cart-count">0</span>
         <i class="bx bx-search" id="search-icon"></i>
       </div>
 
@@ -72,57 +73,57 @@
         <h2>Nossos Produtos</h2>
       </div>
       <div class="products-container">
-        <div class="box">
-          <img src="src/img/p1.png" alt="Produto 1"/>
-          <h3>Americano Puro</h3>
+        <div class="box" data-product-id="1">
+          <img src="src/img/p1.png" alt="Espresso Clássico"/>
+          <h3>Espresso Clássico</h3>
           <div class="content">
-            <span>R$ 30,00</span>
-            <a href="#">Adicionar no Carrinho</a>
+            <span class="price" data-price="25.90">R$ 25,90</span>
+            <button class="add-to-cart-btn" data-name="Espresso Clássico" data-price="25.90" data-image="src/img/p1.png">Adicionar ao Carrinho</button>
           </div>
         </div>
 
-        <div class="box">
-          <img src="src/img/p2.png" alt="Produto 2"/>
-          <h3>Americano Puro</h3>
+        <div class="box" data-product-id="2">
+          <img src="src/img/p2.png" alt="Cappuccino Cremoso"/>
+          <h3>Cappuccino Cremoso</h3>
           <div class="content">
-            <span>R$ 30,00</span>
-            <a href="#">Adicionar no Carrinho</a>
+            <span class="price" data-price="32.50">R$ 32,50</span>
+            <button class="add-to-cart-btn" data-name="Cappuccino Cremoso" data-price="32.50" data-image="src/img/p2.png">Adicionar ao Carrinho</button>
           </div>
         </div>
 
-        <div class="box">
-          <img src="src/img/p3.png" alt="Produto 3"/>
-          <h3>Americano Puro</h3>
+        <div class="box" data-product-id="3">
+          <img src="src/img/p3.png" alt="Latte Especial"/>
+          <h3>Latte Especial</h3>
           <div class="content">
-            <span>R$ 30,00</span>
-            <a href="#">Adicionar no Carrinho</a>
+            <span class="price" data-price="28.90">R$ 28,90</span>
+            <button class="add-to-cart-btn" data-name="Latte Especial" data-price="28.90" data-image="src/img/p3.png">Adicionar ao Carrinho</button>
           </div>
         </div>
 
-        <div class="box">
-          <img src="src/img/p4.png" alt="Produto 4"/>
-          <h3>Americano Puro</h3>
+        <div class="box" data-product-id="4">
+          <img src="src/img/p4.png" alt="Mocha Delicioso"/>
+          <h3>Mocha Delicioso</h3>
           <div class="content">
-            <span>R$ 30,00</span>
-            <a href="#">Adicionar no Carrinho</a>
+            <span class="price" data-price="35.00">R$ 35,00</span>
+            <button class="add-to-cart-btn" data-name="Mocha Delicioso" data-price="35.00" data-image="src/img/p4.png">Adicionar ao Carrinho</button>
           </div>
         </div>
 
-        <div class="box">
-          <img src="src/img/p5.png" alt="Produto 5"/>
-          <h3>Americano Puro</h3>
+        <div class="box" data-product-id="5">
+          <img src="src/img/p5.png" alt="Americano Premium"/>
+          <h3>Americano Premium</h3>
           <div class="content">
-            <span>R$ 30,00</span>
-            <a href="#">Adicionar no Carrinho</a>
+            <span class="price" data-price="22.90">R$ 22,90</span>
+            <button class="add-to-cart-btn" data-name="Americano Premium" data-price="22.90" data-image="src/img/p5.png">Adicionar ao Carrinho</button>
           </div>
         </div>
 
-        <div class="box">
-          <img src="src/img/p6.png" alt="Produto 6"/>
-          <h3>Americano Puro</h3>
+        <div class="box" data-product-id="6">
+          <img src="src/img/p6.png" alt="Macchiato Artesanal"/>
+          <h3>Macchiato Artesanal</h3>
           <div class="content">
-            <span>R$ 30,00</span>
-            <a href="#">Adicionar no Carrinho</a>
+            <span class="price" data-price="38.50">R$ 38,50</span>
+            <button class="add-to-cart-btn" data-name="Macchiato Artesanal" data-price="38.50" data-image="src/img/p6.png">Adicionar ao Carrinho</button>
           </div>
         </div>
       </div>
@@ -183,6 +184,81 @@
       </section>
     </section>
 
+    <!-- best products slider section starts -->
+    <section class="best-products" id="best-products">
+        <h1 class="heading"> Nossos <span>Melhores</span> Produtos </h1>
+        
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="product-slider">
+                    <div class="slide active">
+                        <div class="slide-content">
+                            <img src="src/img/p1.png" alt="Café Premium">
+                            <h3>Café Premium Especial</h3>
+                            <p>Grãos selecionados com torra artesanal, proporcionando um sabor único e marcante.</p>
+                            <div class="price">R$ 25,90</div>
+                            <button class="add-to-cart-btn" data-name="Café Premium Especial" data-price="25.90" data-image="src/img/p1.png">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="src/img/p2.png" alt="Cappuccino Gourmet">
+                            <h3>Cappuccino Gourmet</h3>
+                            <p>Combinação perfeita de café espresso com leite vaporizado e espuma cremosa.</p>
+                            <div class="price">R$ 18,50</div>
+                            <button class="add-to-cart-btn" data-name="Cappuccino Gourmet" data-price="18.50" data-image="src/img/p2.png">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="src/img/p3.png" alt="Mocha Deluxe">
+                            <h3>Mocha Deluxe</h3>
+                            <p>Café espresso com chocolate belga e chantilly, uma experiência indulgente.</p>
+                            <div class="price">R$ 22,90</div>
+                            <button class="add-to-cart-btn" data-name="Mocha Deluxe" data-price="22.90" data-image="src/img/p3.png">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="src/img/p4.png" alt="Latte Vanilla">
+                            <h3>Latte Vanilla Premium</h3>
+                            <p>Café suave com leite cremoso e essência natural de baunilha Madagascar.</p>
+                            <div class="price">R$ 20,90</div>
+                            <button class="add-to-cart-btn" data-name="Latte Vanilla Premium" data-price="20.90" data-image="src/img/p4.png">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="src/img/p5.png" alt="Americano Intenso">
+                            <h3>Americano Intenso</h3>
+                            <p>Café americano com torra escura, ideal para quem aprecia sabores marcantes.</p>
+                            <div class="price">R$ 15,90</div>
+                            <button class="add-to-cart-btn" data-name="Americano Intenso" data-price="15.90" data-image="src/img/p5.png">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev-btn" id="prevBtn">❮</button>
+                <button class="next-btn" id="nextBtn">❯</button>
+            </div>
+            
+            <div class="slider-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+            </div>
+        </div>
+    </section>
+    <!-- best products slider section ends -->
+
     <section class="footer">
       <div class="footer-box">
         <h3>Cafeteria</h3>
@@ -225,6 +301,48 @@
 
     <div class="copyright">
       <p>&#169; Fernando Henrique Silva - All Right Reserved</p>
+    </div>
+
+    <!-- cart sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-cart"></i> Seu Carrinho</h2>
+                <button class="close-cart" id="closeCart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-body">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">R$ <span id="cartTotal">0,00</span></span>
+                    </div>
+                </div>
+                
+                <div class="cart-actions">
+                    <button class="clear-cart-btn" id="clearCart">
+                        <i class="fas fa-trash"></i> Limpar Carrinho
+                    </button>
+                    <button class="checkout-btn" id="checkout">
+                        <i class="fas fa-credit-card"></i> Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificação -->
+    <div class="notification" id="notification">
+      <span id="notification-text"></span>
     </div>
 
     <script src="src/js/script.js"></script>
